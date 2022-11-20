@@ -1,0 +1,43 @@
+<h1>code-driven form handling</h1>
+<form [formGroup]="myform" (ngSubmit)=addEmployee()>
+
+    <div  class="form-group">
+        <label>Employee Name</label>
+
+        <input name="empName" formControlName="empName" class="form-control">
+
+        <div *ngIf="!isNameCtrlRequireValid() " class="text-danger">
+            name is required
+        </div>
+
+
+        <div *ngIf="!isNameCtrlMinLengthValid() " class="text-danger">
+            min length is 2
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Employee Age</label>
+
+        <input name="empAge" type="number" formControlName="empAge" class="form-control">
+
+        <div *ngIf="!isAgeCtrlRequireValid()" class="text-danger">
+            Age is required
+        </div>
+
+        <div *ngIf="!isAgeCtrlMinOrMaxValid()" class="text-danger">
+            Age is between 18 and 100
+        </div>
+
+
+
+    </div>
+
+    <button class="btn btn-success">Submit</button>
+
+</form>
+
+<div *ngIf="employee">
+    <h3>Employee Details entered</h3>
+    employee {{employee.empName}} {{employee.empAge}}
+</div>

@@ -1,0 +1,34 @@
+{
+  "trainees": [
+    {
+      "id": "54dj",
+      "name": "sachin tendulkar",
+      "age": 45
+    },
+    {
+      "id": "njh7",
+      "name": "virat kohli",
+      "age": 25
+    },
+    {
+      "name": "bankim",
+      "age": 21,
+      "id": "v6pI6rQ"
+    },
+    {
+      "name": "shivam",
+      "age": "21",
+      "id": "9v4ST-T"
+    },
+    {
+      "name": "govind",
+      "age": 21,
+      "id": "BsH81KX"
+    },
+    {
+      "name": "repul",
+      "age": "21",
+      "id": "RtzJQJ5"
+    }
+  ]
+}

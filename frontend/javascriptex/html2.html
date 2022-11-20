@@ -1,0 +1,40 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>html event demo </title>
+
+    <script type="text/javascript">
+
+        function inputReceived(inputElementId, resultElementId) {
+            console.log("inside inpuReceived")
+            let inputElement = document.getElementById(inputElementId);
+            let inputValue = inputElement.value;
+            let resultElement = document.getElementById(resultElementId);
+            let msg = `<h2> username is ${inputValue} </h2>`
+            resultElement.innerHTML = msg;
+        }
+
+    </script>
+
+</head>
+
+
+<body style="margin:50px">
+
+    <h1>html event onkeyup demo</h1>
+
+    <form style="margin-bottom: 50px;">
+
+        <label>UserName</label>
+        <input name="username" id="username" onblur="inputReceived('username','resultContainer')">
+
+    </form>
+
+    <div id="resultContainer" style="background-color:green;width:200px;height:100px;">
+
+    </div>
+
+</body>
+
+</html>

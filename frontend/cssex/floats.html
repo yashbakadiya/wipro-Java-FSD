@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Float </title>
+
+    <style type="text/css">
+    
+   body{
+       background-color:#000000;
+       color:#ffffff;
+   }
+
+    .horizontalbox {
+            width: 300px;
+            height: 200px;            
+            background-color: red;
+            color: #f5f5f5;
+            float: left; 
+            margin-right: 20px;
+
+        }
+
+        .verticalbox {
+            width: 300px;
+            height: 200px;            
+            background-color: red;
+            color: #f5f5f5;
+            margin-right: 20px;
+            clear: both;
+        }
+
+        img{
+            width:100px;
+            height: 70px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <p>Float helps in positioning elements,
+         in this example we are positioning block element adjacent to each other hoizontally using float
+         <br>
+         Default behavior is blocked elemnts will start in next line
+        
+    </p>
+
+
+    <div class="horizontalbox">
+
+        <img src="images/indianflag.png"  >
+     <p> About Indian flag</p>
+
+    </div>
+
+<div class="horizontalbox">
+    <img src="images/usaflag.jpg"  >
+     <p>About Usa flag</p>
+</div>
+
+
+<div class="verticalbox">
+Third box 
+</div>
+
+</body>
+
+</html>

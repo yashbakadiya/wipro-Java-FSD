@@ -1,0 +1,26 @@
+<h2>Login </h2>
+
+<form  [formGroup]="formGroup"  (ngSubmit)="onFormSubmit()">
+
+    <div>
+     <label>username</label>
+     <input formControlName="username">   
+    </div>
+
+
+    <div>
+        <label>password</label>
+        <input formControlName="password" type="password">   
+       </div>
+
+
+       <button>Submit</button>
+
+</form>
+
+
+<div *ngIf="errMsg">
+
+   Couldnt login , {{errMsg}}
+
+</div>

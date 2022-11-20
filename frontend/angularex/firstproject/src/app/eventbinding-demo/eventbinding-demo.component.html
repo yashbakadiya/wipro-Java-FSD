@@ -1,0 +1,16 @@
+<h2>Event Binding</h2>
+
+
+<button  (click)="increment()">Increment </button>
+<br><br>
+Counter is {{counter}}
+
+<br>
+
+<label>Write username</label>
+
+<input (change)="changeUserName($event.target.value)" >
+
+<br>
+UserName is {{username}}
+

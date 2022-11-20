@@ -1,0 +1,39 @@
+<h2>structuraldirectives-demo</h2>
+
+<ul>
+
+    <li *ngFor="let product of products; let i =index">
+
+        index is {{i}} ) {{product.name}} , {{product.price}}
+
+    </li>
+
+</ul>
+
+
+<div *ngIf="num%2===0;else elseblock">
+    {{num}} is an even number
+</div>
+
+
+<ng-template #elseblock>
+    {{num}} is an odd number
+</ng-template>
+
+<h3>switch case</h3>
+
+<div [ngSwitch]="5">
+
+    <div *ngSwitchCase="1">
+        One
+    </div>
+
+    <div *ngSwitchCase="2">
+        two
+    </div>
+
+    <div *ngSwitchDefault>
+        Default, when no match
+    </div>
+
+</div>

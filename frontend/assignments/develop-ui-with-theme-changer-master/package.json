@@ -1,0 +1,29 @@
+{
+  "name": "develop-ui-with-theme-changer",
+  "version": "1.0.0",
+  "description": "A lot of good websites today offer an option to viewers to view the pages with the theme of their choice",
+  "main": "index.js",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.0.0",
+    "mocha": "^5.0.5",
+    "mocha-jsdom": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/node": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "jest": "^27.4.5"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js",
+    "eslint": "./node_modules/.bin/eslint *.js '**/*.js'"
+  },
+  "jest": {
+    "testEnvironment": "window.localStorage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

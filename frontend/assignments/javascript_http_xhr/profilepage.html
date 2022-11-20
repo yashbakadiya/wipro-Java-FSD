@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script type="text/javascript" src="requests.js"></script>
+
+</head>
+
+<h1>Add Trainee, Get Trainee details</h1>
+
+<body>
+
+
+    <h3>Add Trainee</h3>
+    <section style="margin-bottom: 100px;">
+        <form>
+            <div>
+                <label>Trainee Name</label>
+                <input id="nameField" name="nameField">
+            </div>
+
+            <div>
+                <label>Trainee Age</label>
+                <input id="ageField" name="ageField">
+            </div>
+
+            <button type="button" onclick="addTrainee('nameField','ageField', 'addResult')"> Add Trainee</button>
+
+
+        </form>
+
+        <div id="addResult" name="addResult"></div>
+
+
+    </section>
+
+
+    <section>
+        <h3>Get Trainee Details</h3>
+
+        <form>
+            <div>
+                <label>Trainee Id</label>
+                <input id="idField" name="idField">
+            </div>
+
+
+            <button type="button" onclick="getTrainee('idField','container')"> Fetch Trainee</button>
+
+        </form>
+
+        <div id="container">
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

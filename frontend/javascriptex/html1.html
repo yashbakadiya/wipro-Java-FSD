@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Html event Demo </title>
+
+    <script type="text/javascript">
+
+        function showMessage(id) {
+            console.log("inside showmessage function, input id="+id);
+            var element = document.getElementById(id);
+            var msg = "<h3> welcome to javascript </h3>";
+            element.innerHTML = msg;
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+
+    <h1>Html event onclick demo</h1>
+
+    <button onclick="showMessage('container')">Display </button>
+
+    
+    <div id="container">
+
+    </div>
+
+</body>
+
+</html>

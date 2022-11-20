@@ -1,0 +1,17 @@
+<h2>Attribute Directives</h2>
+
+<h3>ngClss attribute directive</h3>
+
+<div [ngClass]="{'even': num%2==0, 'odd':num%2!==0}">
+    {{num}}
+</div>
+
+<h3>ngstyle attribute directive</h3>
+
+<div [ngStyle]=" {'background-color':backValue,
+'color':colorValue,
+'padding':paddingValue
+}">
+    ngStyle demo
+
+</div>

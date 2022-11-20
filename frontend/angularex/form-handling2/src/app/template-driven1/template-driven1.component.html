@@ -1,0 +1,42 @@
+<h1>Template driven</h1>
+
+<form #myform="ngForm" (ngSubmit)=addEmployee(myform)>
+
+    <div class="form-group">
+        <label>Employee Name</label>
+
+        <input name="empName" ngModel  #nameCtrl=ngModel required  minlength="2" class="form-control">
+
+
+        <div *ngIf="!isNameCtrlRequireValid(nameCtrl)"  class="text-danger">
+            name is required
+          </div>
+  
+          <div *ngIf="!isNameCtrlMinLengthValid(nameCtrl)" class="text-danger">
+            min length is 2
+          </div>
+    </div>
+
+    <div class="form-group">
+        <label>Employee Age</label>
+
+        <input name="empAge" type="number" ngModel  #ageCtrl=ngModel required min="18" max="100" class="form-control">
+       
+        <div *ngIf="!isAgeCtrlRequireValid(ageCtrl)"  class="text-danger">
+            age is required
+         </div>
+
+        <div *ngIf="!isAgeCtrlMinOrMaxValid(ageCtrl) "  class="text-danger">
+            minimum age should be 18
+         </div>
+
+    </div>
+
+    <button class="btn btn-success">Submit</button>
+
+</form>
+
+<div *ngIf="employee">
+    <h3>Employee Details entered</h3>
+    employee {{employee.empName}} {{employee.empAge}}
+</div>

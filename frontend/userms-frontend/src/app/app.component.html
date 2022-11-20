@@ -1,0 +1,17 @@
+
+<div *ngIf="isLoggedIn()">
+
+    <button (click)="logout()">Logout</button>
+
+    <a routerLink="/dashboard">Dashboard</a>
+
+</div>
+
+<div *ngIf="!isLoggedIn()">
+
+    <a routerLink="/login">Login</a>
+
+</div>
+
+
+<router-outlet></router-outlet>

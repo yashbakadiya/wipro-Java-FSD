@@ -1,0 +1,39 @@
+<h1>Template driven using two way binding [(ngModel)]</h1>
+
+<form #myform="ngForm" (ngSubmit)=addEmployee(myform)>
+
+    <div class="form-group">
+        <label>Employee Name</label>
+
+        <input name="empName" #nameCtrl=ngModel [(ngModel)]="employee.empName" required  minlength="2" class="form-control">
+
+
+        <div *ngIf="(nameCtrl.touched || nameCtrl.dirty)  && nameCtrl.errors?.required"  class="text-danger">
+            name is required
+          </div>
+  
+          <div *ngIf="(nameCtrl.touched || nameCtrl.dirty)  && nameCtrl.errors?.minlength"  class="text-danger">
+            min length is 2
+          </div>
+    </div>
+
+    <div class=form-group>
+        <label>Employee Age</label>
+
+        <input name="empAge" type="number"  #ageCtrl=ngModel [(ngModel)]="employee.empAge" class="form-control" >
+
+       
+        <div *ngIf="(ageCtrl.touched || ageCtrl.dirty) && !isAgeValid(ageCtrl.value)"  class="text-danger">
+            minimum age should be 18
+         </div>
+
+    </div>
+
+    <button class="btn btn-success">Submit</button>
+
+</form>
+
+<div *ngIf="isSent">
+    <h3>Employee Details entered</h3>
+    employee {{employee.empName}} {{employee.empAge}}
+</div>

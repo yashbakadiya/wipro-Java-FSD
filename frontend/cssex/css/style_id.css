@@ -1,0 +1,17 @@
+
+
+#redbox{
+    height: 200px;
+    width: 300px;
+    background: red;
+    margin-bottom: 50px;
+    color: white;
+}
+
+#yellowbox{
+    height: 200px;
+    width: 300px;
+    background:yellow;
+    margin-bottom: 50px;
+    color: black;
+}

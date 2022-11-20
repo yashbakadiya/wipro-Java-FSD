@@ -1,0 +1,20 @@
+<h1>code-driven form handling</h1>
+<form [formGroup]="myform" (ngSubmit)=addEmployee()>
+
+    <div  class="form-group">
+        <label>Employee Name</label>
+
+        <input name="empName" formControlName="empName" class="form-control">
+
+       
+    </div>
+
+   
+    <button class="btn btn-success">Submit</button>
+
+</form>
+
+<div *ngIf="employee">
+    <h3>Employee Details entered</h3>
+    employee {{employee.name}}
+</div>
