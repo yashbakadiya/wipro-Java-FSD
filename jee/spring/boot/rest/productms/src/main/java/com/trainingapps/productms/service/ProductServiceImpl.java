@@ -1,5 +1,6 @@
 package com.trainingapps.productms.service;
 
+import com.trainingapps.productms.dto.ChangeNameRequest;
 import com.trainingapps.productms.exceptions.ProductNotFoundException;
 import com.trainingapps.productms.dao.IProductDao;
 import com.trainingapps.productms.dto.AddProductRequest;
@@ -41,6 +42,15 @@ public class ProductServiceImpl implements IProductService {
     @Override
     public ProductDetails findProductDetailsById(int id) throws ProductNotFoundException {
         Product product=findById(id);
+        ProductDetails desired=util.toProductDetails(product);
+        return desired;
+    }
+
+    @Override
+    public ProductDetails updateName(int productId, ChangeNameRequest requestData) throws ProductNotFoundException {
+        Product product = findById(productId);
+        product.setName(requestData.getUpdatedName());
+        productDao.update(product);
         ProductDetails desired=util.toProductDetails(product);
         return desired;
     }

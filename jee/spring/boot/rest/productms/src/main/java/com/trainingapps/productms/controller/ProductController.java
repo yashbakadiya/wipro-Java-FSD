@@ -1,6 +1,7 @@
 package com.trainingapps.productms.controller;
 
 import com.trainingapps.productms.dto.AddProductRequest;
+import com.trainingapps.productms.dto.ChangeNameRequest;
 import com.trainingapps.productms.dto.ChangePriceRequest;
 import com.trainingapps.productms.dto.ProductDetails;
 import com.trainingapps.productms.service.IProductService;
@@ -40,6 +41,12 @@ public class ProductController {
     @PostMapping("/add")
     public ProductDetails addProduct(@RequestBody AddProductRequest requestData) {
         ProductDetails response = service.addProduct(requestData);
+        return response;
+    }
+
+    @PutMapping("/name/change/{id}")
+    public ProductDetails updateName(@RequestBody ChangeNameRequest requestData, @PathVariable int id) throws Exception {
+        ProductDetails response = service.updateName(id, requestData);
         return response;
     }
 
