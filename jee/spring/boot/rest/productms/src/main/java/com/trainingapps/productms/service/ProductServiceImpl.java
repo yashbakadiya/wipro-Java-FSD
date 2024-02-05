@@ -1,11 +1,8 @@
 package com.trainingapps.productms.service;
 
-import com.trainingapps.productms.dto.ChangeNameRequest;
+import com.trainingapps.productms.dto.*;
 import com.trainingapps.productms.exceptions.ProductNotFoundException;
 import com.trainingapps.productms.dao.IProductDao;
-import com.trainingapps.productms.dto.AddProductRequest;
-import com.trainingapps.productms.dto.ChangePriceRequest;
-import com.trainingapps.productms.dto.ProductDetails;
 import com.trainingapps.productms.entity.Product;
 import com.trainingapps.productms.util.ProductUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,17 +44,9 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public ProductDetails updateName(int productId, ChangeNameRequest requestData) throws ProductNotFoundException {
+    public ProductDetails updateProduct(int productId, UpdateProductRequest requestData) throws ProductNotFoundException {
         Product product = findById(productId);
-        product.setName(requestData.getUpdatedName());
-        productDao.update(product);
-        ProductDetails desired=util.toProductDetails(product);
-        return desired;
-    }
-
-    @Override
-    public ProductDetails changePrice(int productId, ChangePriceRequest requestData) throws ProductNotFoundException {
-        Product product = findById(productId);
+        product.setName(requestData.getNewName());
         product.setPrice(requestData.getNewPrice());
         productDao.update(product);
         ProductDetails desired=util.toProductDetails(product);

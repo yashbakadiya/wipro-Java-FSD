@@ -1,9 +1,7 @@
 package com.trainingapps.productms.controller;
 
-import com.trainingapps.productms.dto.AddProductRequest;
-import com.trainingapps.productms.dto.ChangeNameRequest;
-import com.trainingapps.productms.dto.ChangePriceRequest;
-import com.trainingapps.productms.dto.ProductDetails;
+import ch.qos.logback.core.net.SyslogOutputStream;
+import com.trainingapps.productms.dto.*;
 import com.trainingapps.productms.service.IProductService;
 import com.trainingapps.productms.util.ProductUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,15 +42,9 @@ public class ProductController {
         return response;
     }
 
-    @PutMapping("/name/change/{id}")
-    public ProductDetails updateName(@RequestBody ChangeNameRequest requestData, @PathVariable int id) throws Exception {
-        ProductDetails response = service.updateName(id, requestData);
-        return response;
-    }
-
-    @PutMapping("/price/change/{id}")
-    public ProductDetails changePrice(@RequestBody ChangePriceRequest requestData, @PathVariable int id) throws Exception {
-        ProductDetails response = service.changePrice(id, requestData);
+    @PutMapping("/update/{id}")
+    public ProductDetails updateProduct(@RequestBody UpdateProductRequest requestData, @PathVariable int id) throws Exception {
+        ProductDetails response = service.updateProduct(id, requestData);
         return response;
     }
 

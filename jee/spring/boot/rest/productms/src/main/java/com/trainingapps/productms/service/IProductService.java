@@ -1,9 +1,6 @@
 package com.trainingapps.productms.service;
 
-import com.trainingapps.productms.dto.AddProductRequest;
-import com.trainingapps.productms.dto.ChangeNameRequest;
-import com.trainingapps.productms.dto.ChangePriceRequest;
-import com.trainingapps.productms.dto.ProductDetails;
+import com.trainingapps.productms.dto.*;
 import com.trainingapps.productms.entity.Product;
 import com.trainingapps.productms.exceptions.ProductNotFoundException;
 import org.springframework.validation.annotation.Validated;
@@ -21,9 +18,7 @@ public interface IProductService {
 
     ProductDetails findProductDetailsById(@Min(1)int id) throws ProductNotFoundException;
 
-    ProductDetails updateName(@Min(1)int productId,@Valid ChangeNameRequest request) throws ProductNotFoundException;
-
-    ProductDetails changePrice(@Min(1)int productId,@Valid ChangePriceRequest request) throws ProductNotFoundException;
+    ProductDetails updateProduct(@Min(1)int productId,@Valid UpdateProductRequest request) throws ProductNotFoundException;
 
     List<ProductDetails> findAll();
 
