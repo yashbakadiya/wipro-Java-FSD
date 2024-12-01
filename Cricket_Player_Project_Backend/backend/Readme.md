@@ -71,10 +71,6 @@ This module is responsible for service discovery using Netflix Eureka. It helps 
 
 ### 1\. Clone the Repository
 
-bash
-
-Copy code
-
 `git clone <repository-url> cd <project-folder>`
 
 ### 2\. Build and Run
@@ -82,25 +78,13 @@ Copy code
 1.  Ensure MySQL is running, and the required databases are set up.
 2.  Build the project:
     
-    bash
-    
-    Copy code
-    
     `mvn clean install`
     
 3.  Start the Discovery Server:
     
-    bash
-    
-    Copy code
-    
     `cd discoveryserver mvn spring-boot:run`
     
 4.  Start the `userms` and `favouritems` services:
-    
-    bash
-    
-    Copy code
     
     `cd userms mvn spring-boot:run  cd ../favouritems mvn spring-boot:run`
     
