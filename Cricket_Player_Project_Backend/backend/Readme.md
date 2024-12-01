@@ -52,7 +52,7 @@ This module is responsible for service discovery using Netflix Eureka. It helps 
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 </dependency>
-
+```
 **Technologies Used**
 ---------------------
 
