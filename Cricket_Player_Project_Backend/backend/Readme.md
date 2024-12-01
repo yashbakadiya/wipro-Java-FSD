@@ -41,7 +41,7 @@ This module manages users' favorite items, such as adding, removing, and viewing
 | `/favouritePlayers/delete`       | DELETE      | Remove a player from the favorites list.  |
 | `/favouritePlayers/allFavoritedPlayer/{userName}` | GET | List all favorite players for a user.    |
 
----
+* * *
 
 ### 3. **Discovery Server (`discoveryserver`)**
 This module is responsible for service discovery using Netflix Eureka. It helps manage and locate services in the microservices architecture.
@@ -52,8 +52,6 @@ This module is responsible for service discovery using Netflix Eureka. It helps 
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 </dependency>
-
-* * *
 
 **Technologies Used**
 ---------------------
@@ -113,30 +111,3 @@ Use tools like **Postman** or **cURL** to interact with the APIs.
 
 * * *
 
-**Future Enhancements**
------------------------
-
-*   Add unit and integration tests.
-*   Enhance security with role-based access control.
-*   Integrate a front-end application.
-*   Add API documentation using **Swagger**.
-
-* * *
-
-**Contributors**
-----------------
-
-*   **Your Name** - _Developer_
-
-* * *
-
-**License**
------------
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-vbnet
-
-Copy code
-
-`Let me know if you'd like to refine this further!`
